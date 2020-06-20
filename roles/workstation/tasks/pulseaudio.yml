@@ -1,0 +1,33 @@
+- name: Check {{ configdir }}/pulse/default.pa
+  stat:
+    path: '{{ configdir }}/pulse/default.pa'
+  register: pulse_config
+
+- name: Create pulse config directory
+  file:
+    path: '{{ configdir }}/pulse'
+    state: directory
+  when: not pulse_config.stat.exists
+
+- name: Copy default pulseaudio config to user dir
+  copy:
+    src: /etc/pulse/default.pa
+    dest: '{{ configdir }}/pulse/default.pa'
+  when: not pulse_config.stat.exists
+
+- name: Enable pulseaudio dbus module
+  lineinfile:
+    path: '{{ configdir }}/pulse/default.pa'
+    line: load-module module-dbus-protocol
+
+- name: Enable pulseaudio user service
+  systemd:
+    name: pulseaudio.service
+    enabled: yes
+    scope: user
+
+- name: Disable pulseaudio user socket
+  systemd:
+    name: pulseaudio.socket
+    enabled: no
+    scope: user

@@ -1,0 +1,20 @@
+- hosts: localhost
+  connection: local
+  gather_facts: no
+  pre_tasks:
+    - name: Get fedora version
+      command: rpm -E %fedora
+      args:
+        warn: false
+      register: releasever_cmd
+    - name: Get chassis type
+      shell: hostnamectl | awk '$1 == "Chassis:" {print $2}'
+      register: chassis_cmd
+  vars:
+    releasever: '{{ releasever_cmd.stdout }}'
+    chassis: '{{ chassis_cmd.stdout }}'
+    homedir: "{{ lookup('env', 'HOME') }}"
+    configdir: '{{ homedir }}/.config'
+    localdir: '{{ homedir }}/.local'
+  roles:
+    - workstation

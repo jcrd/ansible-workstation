@@ -1,0 +1,11 @@
+- name: Enable copr repos
+  command: dnf copr -y enable {{ item }}
+  args:
+    warn: false
+  loop:
+    - rockowitz/ddcutil
+
+- name: Install packages
+  dnf:
+    name:
+      - ddcutil

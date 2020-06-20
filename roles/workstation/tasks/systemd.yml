@@ -1,0 +1,8 @@
+- name: Enable systemd user units from packages
+  systemd:
+    name: "{{ item }}"
+    enabled: yes
+    scope: user
+  loop:
+    - clipsync.service
+    - wm-launchd.service

@@ -1,0 +1,82 @@
+- name: Enable rpmfusion repos
+  dnf:
+    name:
+      - 'https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-{{ releasever }}.noarch.rpm'
+      - 'https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-{{ releasever }}.noarch.rpm'
+
+- name: Enable copr repos
+  command: dnf copr -y enable {{ item }}
+  args:
+    warn: false
+  loop:
+    - jcrd/awesome-nightly
+    - jcrd/clipped
+    - jcrd/passless
+    - jcrd/sessiond
+    - jcrd/wm-launch
+
+- name: Upgrade all packages
+  dnf:
+    name: "*"
+    state: latest
+
+- name: Install packages
+  dnf:
+    name:
+      - ImageMagick
+      - abduco
+      - atool
+      - chromium-freeworld
+      - clipped
+      - copr-cli
+      - d-feet
+      - exa
+      - fedora-packager
+      - fedora-review
+      - ffmpegthumbnailer
+      - fontawesome-fonts
+      - fzf
+      - git
+      - git-subtree
+      - gucharmap
+      - i3lock
+      - kernel-tools
+      - kitty
+      - liberation-fonts
+      - lm_sensors
+      - luarocks
+      - mpv
+      - mupdf
+      - neovim
+      - passless
+      - picom
+      - pinentry-gtk
+      - ps_mem
+      - python-neovim
+      - python-pillow
+      - qutebrowser
+      - ranger
+      - rofi
+      - rpkg
+      - sessiond
+      - strace
+      - sxiv
+      - toolbox
+      - wm-launch
+      - zsh
+
+- name: Set zsh as user shell
+  user:
+    name: '{{ ansible_user }}'
+    shell: /usr/bin/zsh
+
+- name: Add user to mock group
+  user:
+    name: '{{ ansible_user }}'
+    groups: mock
+    append: yes
+
+- name: Use Liberation fonts
+  copy:
+    src: liberation-fonts-local.conf
+    dest: /etc/fonts/local.conf

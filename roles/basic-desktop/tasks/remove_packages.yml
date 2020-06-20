@@ -1,0 +1,16 @@
+- name: Remove packages included in basic-desktop software selection
+  dnf:
+    name:
+      - cronie
+      - fprintd
+      - i3
+      - initial-setup-gui
+      - openbox
+      - pcsc-lite
+      - qtile
+      - ratpoison
+      - xmonad-core
+    state: absent
+
+- name: Autoremove leaf packages
+  dnf: autoremove=yes

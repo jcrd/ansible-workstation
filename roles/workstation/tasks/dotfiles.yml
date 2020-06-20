@@ -1,0 +1,21 @@
+- name: Clone dotfile repos
+  git:
+    repo: 'https://github.com/jcrd/{{ item.repo }}'
+    dest: '{{ configdir }}/{{ item.dest }}'
+    update: no
+  loop:
+    - { repo: 'awesome-config', dest: 'awesome' }
+    - { repo: 'configs', dest: 'configs' }
+    - { repo: 'neovim-config', dest: 'nvim' }
+    - { repo: 'zsh-config', dest: 'zsh' }
+
+- name: Configure dotfiles
+  shell: >
+    cd {{ configdir }}/{{ item }} &&
+    source ../zsh/zshenv &&
+    ./configure
+  loop:
+    - awesome
+    - configs
+    - nvim
+    - zsh

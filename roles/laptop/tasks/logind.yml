@@ -1,0 +1,4 @@
+- name: Configure logind
+  copy:
+    src: 00-logind.conf
+    dest: /etc/systemd/logind.conf.d

@@ -1,0 +1,4 @@
+- name: Create logind conf directory
+  file:
+    path: /etc/systemd/logind.conf.d
+    state: directory

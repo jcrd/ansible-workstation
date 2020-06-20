@@ -1,0 +1,6 @@
+- import_tasks: packages.yml
+  become: yes
+- import_tasks: logind.yml
+  become: yes
+- import_tasks: cpupower.yml
+  become: yes
