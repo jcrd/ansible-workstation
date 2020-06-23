@@ -39,6 +39,7 @@
       - git
       - git-subtree
       - gucharmap
+      - htop
       - i3lock
       - kernel-tools
       - kitty
