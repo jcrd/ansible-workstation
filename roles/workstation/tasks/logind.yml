@@ -2,3 +2,10 @@
   file:
     path: /etc/systemd/logind.conf.d
     state: directory
+
+- name: Configure logind
+  copy:
+    src: "{{ item }}"
+    dest: /etc/systemd/logind.conf.d
+  loop:
+    - kill-user-processes.conf
