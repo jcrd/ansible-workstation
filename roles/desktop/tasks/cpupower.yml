@@ -1,9 +1,0 @@
-- name: Configure cpupower
-  copy:
-    src: cpupower
-    dest: /etc/sysconfig
-
-- name: Enable cpupower systemd service
-  systemd:
-    name: cpupower.service
-    enabled: yes
