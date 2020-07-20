@@ -28,6 +28,7 @@
       - atool
       - chromium-freeworld
       - clipped
+      - colordiff
       - copr-cli
       - d-feet
       - exa
