@@ -1,8 +1,3 @@
-- name: Set up pam_environment for gpg-agent-ssh
-  copy:
-    src: pam_environment
-    dest: "{{ homedir }}/.pam_environment"
-
 - name: Enable gpg systemd user units
   systemd:
     name: "{{ item }}"
