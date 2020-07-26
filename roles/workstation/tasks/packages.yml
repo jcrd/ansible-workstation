@@ -9,7 +9,7 @@
   args:
     warn: false
   loop:
-    - jcrd/awesome-nightly
+    - jcrd/awesome-luajit-nightly
     - jcrd/clipped
     - jcrd/passless
     - jcrd/sessiond
