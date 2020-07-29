@@ -35,7 +35,6 @@
       - fedora-packager
       - fedora-review
       - ffmpegthumbnailer
-      - firejail
       - fontawesome-fonts
       - fzf
       - git
