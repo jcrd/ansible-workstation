@@ -47,6 +47,7 @@
       - liberation-fonts
       - lm_sensors
       - luarocks
+      - mosh
       - mpv
       - mupdf
       - neovim
