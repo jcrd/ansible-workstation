@@ -9,6 +9,7 @@
       - pcsc-lite
       - qtile
       - ratpoison
+      - virtualbox-guest-additions
       - xmonad-core
     state: absent
 
