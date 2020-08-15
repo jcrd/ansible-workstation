@@ -64,6 +64,7 @@
       - sessiond
       - strace
       - sxiv
+      - the_silver_searcher
       - toolbox
       - wm-launch
       - zoxide
