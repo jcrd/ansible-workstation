@@ -54,6 +54,7 @@
       - passless
       - picom
       - pinentry-gtk
+      - progress
       - ps_mem
       - python-neovim
       - python-pillow
