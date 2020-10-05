@@ -15,17 +15,13 @@
     - jcrd/sessiond
     - jcrd/wm-launch
 
-- name: Upgrade all packages
-  dnf:
-    name: "*"
-    state: latest
-
 - name: Install packages
   dnf:
     name:
       - ImageMagick
       - abduco
       - atool
+      - awesome
       - chromium-freeworld
       - clipped
       - colordiff

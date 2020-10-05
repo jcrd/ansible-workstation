@@ -1,6 +1,7 @@
 - name: Remove packages included in basic-desktop software selection
   dnf:
     name:
+      - awesome
       - cronie
       - fprintd
       - i3
