@@ -62,6 +62,7 @@
       - strace
       - sxiv
       - the_silver_searcher
+      - tmux
       - toolbox
       - wm-launch
       - zoxide
