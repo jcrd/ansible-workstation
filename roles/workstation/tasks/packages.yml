@@ -32,6 +32,7 @@
       - fedora-review
       - ffmpegthumbnailer
       - fontawesome-fonts
+      - flatpak
       - fzf
       - git
       - git-subtree
@@ -83,3 +84,8 @@
   copy:
     src: liberation-fonts-local.conf
     dest: /etc/fonts/local.conf
+
+- name: Add flathub flatpak remote
+  flatpak_remote:
+    name: flathub
+    flatpakrepo_url: https://flathub.org/repo/flathub.flatpakrepo
