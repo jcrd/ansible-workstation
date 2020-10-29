@@ -13,6 +13,8 @@
     cd {{ configdir }}/{{ item }} &&
     source ../zsh/zshenv &&
     ./configure
+  args:
+    executable: /usr/bin/zsh
   loop:
     - configs
     - nvim
