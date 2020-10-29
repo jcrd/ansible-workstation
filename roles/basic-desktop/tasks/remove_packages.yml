@@ -16,3 +16,6 @@
 
 - name: Autoremove leaf packages
   dnf: autoremove=yes
+
+- name: Ensure NetworkManager-wifi exists
+  dnf: name=NetworkManager-wifi
