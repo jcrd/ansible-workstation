@@ -4,7 +4,6 @@
     dest: '{{ configdir }}/{{ item.dest }}'
     update: no
   loop:
-    - { repo: 'awesome-config', dest: 'awesome' }
     - { repo: 'configs', dest: 'configs' }
     - { repo: 'neovim-config', dest: 'nvim' }
     - { repo: 'zsh-config', dest: 'zsh' }
@@ -15,7 +14,6 @@
     source ../zsh/zshenv &&
     ./configure
   loop:
-    - awesome
     - configs
     - nvim
     - zsh

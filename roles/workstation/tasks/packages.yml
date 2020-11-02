@@ -9,11 +9,9 @@
   args:
     warn: false
   loop:
-    - jcrd/awesome-luajit-nightly
+    - jcrd/dovetail
     - jcrd/clipped
     - jcrd/passless
-    - jcrd/sessiond
-    - jcrd/wm-launch
 
 - name: Install packages
   dnf:
@@ -21,18 +19,18 @@
       - ImageMagick
       - abduco
       - atool
-      - awesome
       - chromium-freeworld
       - clipped
       - colordiff
       - copr-cli
       - d-feet
+      - dovetail
       - exa
       - fedora-packager
       - fedora-review
       - ffmpegthumbnailer
-      - fontawesome-fonts
       - flatpak
+      - fontawesome-fonts
       - fzf
       - git
       - git-subtree
@@ -59,13 +57,11 @@
       - ranger
       - rofi
       - rpkg
-      - sessiond
       - strace
       - sxiv
       - the_silver_searcher
       - tmux
       - toolbox
-      - wm-launch
       - zoxide
       - zsh
 
