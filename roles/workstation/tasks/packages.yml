@@ -63,6 +63,7 @@
       - ranger
       - rofi
       - rpkg
+      - sshfs
       - strace
       - sxiv
       - the_silver_searcher
