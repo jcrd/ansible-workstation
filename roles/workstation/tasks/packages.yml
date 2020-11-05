@@ -25,6 +25,7 @@
       - ImageMagick
       - abduco
       - atool
+      - blueman
       - chromium-freeworld
       - clipped
       - colordiff
