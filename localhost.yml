@@ -16,5 +16,6 @@
     homedir: "{{ lookup('env', 'HOME') }}"
     configdir: '{{ homedir }}/.config'
     localdir: '{{ homedir }}/.local'
+    user: "{{ lookup('env', 'USER') }}"
   roles:
     - workstation
