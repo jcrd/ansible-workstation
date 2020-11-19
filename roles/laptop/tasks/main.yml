@@ -2,3 +2,5 @@
   become: yes
 - import_tasks: logind.yml
   become: yes
+- import_tasks: resume.yml
+  become: yes

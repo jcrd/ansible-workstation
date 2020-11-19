@@ -1,0 +1,14 @@
+- name: Check /etc/dracut.conf.d/resume.conf
+  stat:
+    path: /etc/dracut.conf.d/resume.conf
+  register: resume_conf
+
+- name: Configure dracut for resuming
+  copy:
+    content: 'add_dracutmodules+=" resume "'
+    dest: /etc/dracut.conf.d/resume.conf
+  when: not resume_conf.stat.exists
+
+- name: Run dracut
+  command: dracut -f
+  when: not resume_conf.stat.exists
