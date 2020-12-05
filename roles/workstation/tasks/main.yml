@@ -1,5 +1,7 @@
 - import_tasks: packages.yml
   become: yes
+- import_tasks: sudo.yml
+  become: yes
 - import_tasks: logind.yml
   become: yes
 - import_tasks: systemd.yml

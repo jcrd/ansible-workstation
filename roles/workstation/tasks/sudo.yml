@@ -1,0 +1,6 @@
+- name: Configure sudo
+  copy:
+    content: "Defaults timestamp_timeout=60\n"
+    dest: /etc/sudoers.d/00-timestamp_timeout
+    mode: 0440
+    validate: visudo -cf %s
