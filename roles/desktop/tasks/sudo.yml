@@ -1,0 +1,6 @@
+- name: Let ddcutil run without a password
+  copy:
+    content: "%wheel ALL=(ALL) NOPASSWD: /usr/bin/ddcutil\n"
+    dest: /etc/sudoers.d/10-ddcutil
+    mode: 0440
+    validate: visudo -cf %s
