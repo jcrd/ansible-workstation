@@ -7,6 +7,7 @@
   copy:
     content: 'add_dracutmodules+=" resume "'
     dest: /etc/dracut.conf.d/resume.conf
+    mode: 0644
   when: not resume_conf.stat.exists
 
 - name: Run dracut

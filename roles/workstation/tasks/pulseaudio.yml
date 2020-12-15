@@ -7,12 +7,14 @@
   file:
     path: '{{ configdir }}/pulse'
     state: directory
+    mode: 0755
   when: not pulse_config.stat.exists
 
 - name: Copy default pulseaudio config to user dir
   copy:
     src: /etc/pulse/default.pa
     dest: '{{ configdir }}/pulse/default.pa'
+    mode: preserve
   when: not pulse_config.stat.exists
 
 - name: Enable pulseaudio dbus module

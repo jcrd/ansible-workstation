@@ -2,10 +2,12 @@
   file:
     path: /etc/systemd/logind.conf.d
     state: directory
+    mode: 0755
 
 - name: Configure logind
   copy:
     src: "{{ item }}"
     dest: /etc/systemd/logind.conf.d
+    mode: preserve
   loop:
     - kill-user-processes.conf

@@ -14,6 +14,7 @@
   copy:
     src: /usr/share/ddcutil/data/45-ddcutil-i2c.rules
     dest: /etc/udev/rules.d
+    mode: preserve
   become: yes
 
 - name: Create i2c group

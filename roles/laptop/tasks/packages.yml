@@ -19,3 +19,4 @@
   copy:
     content: acpi_call
     dest: /etc/modules-load.d/acpi_call.conf
+    mode: 0644
