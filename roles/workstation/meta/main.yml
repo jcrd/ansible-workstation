@@ -1,5 +1,5 @@
 dependencies:
-  - role: basic-desktop
+  - role: basic_desktop
   - role: desktop
     when: chassis == 'desktop'
   - role: laptop
