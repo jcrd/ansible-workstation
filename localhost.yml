@@ -8,7 +8,7 @@
         warn: false
       register: releasever_cmd
     - name: Get chassis type
-      shell: hostnamectl | awk '$1 == "Chassis:" {print $2}'
+      shell: set -o pipefail; hostnamectl | awk '$1 == "Chassis:" {print $2}'
       register: chassis_cmd
   vars:
     releasever: '{{ releasever_cmd.stdout }}'
