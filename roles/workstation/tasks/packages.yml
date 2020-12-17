@@ -31,7 +31,6 @@
       - colordiff
       - copr-cli
       - d-feet
-      - dovetail
       - exa
       - fedora-packager
       - fedora-review
@@ -73,6 +72,12 @@
       - xorg-x11-server-Xephyr
       - zoxide
       - zsh
+
+- name: Install packages excluding weak dependencies
+  dnf:
+    name:
+      - dovetail
+    install_weak_deps: no
 
 - name: Set zsh as user shell
   user:
