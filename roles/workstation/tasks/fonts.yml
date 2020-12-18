@@ -1,0 +1,15 @@
+- name: Configure font rendering
+  file:
+    src: /usr/share/fontconfig/conf.avail/{{ item }}
+    dest: /etc/fonts/conf.d/{{ item }}
+    state: link
+    mode: preserve
+  loop:
+    - 10-sub-pixel-rgb.conf
+    - 11-lcdfilter-default.conf
+
+- name: Use Liberation fonts
+  copy:
+    src: liberation-fonts-local.conf
+    dest: /etc/fonts/local.conf
+    mode: preserve

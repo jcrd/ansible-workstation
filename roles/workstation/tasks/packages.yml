@@ -90,12 +90,6 @@
     groups: mock
     append: yes
 
-- name: Use Liberation fonts
-  copy:
-    src: liberation-fonts-local.conf
-    dest: /etc/fonts/local.conf
-    mode: preserve
-
 - name: Add flathub flatpak remote
   flatpak_remote:
     name: flathub
