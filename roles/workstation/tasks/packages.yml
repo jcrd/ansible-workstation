@@ -61,6 +61,7 @@
       - python-pillow
       - qutebrowser
       - ranger
+      - redshift
       - rofi
       - rpkg
       - sshfs

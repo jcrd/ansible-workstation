@@ -5,4 +5,5 @@
     scope: user
   loop:
     - clipsync.service
+    - redshift.service
     - wm-launchd.service
