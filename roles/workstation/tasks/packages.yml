@@ -43,6 +43,7 @@
       - gucharmap
       - htop
       - i3lock
+      - iotop
       - kernel-tools
       - kitty
       - liberation-fonts
