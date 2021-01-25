@@ -6,7 +6,7 @@
   become: yes
 - import_tasks: logind.yml
   become: yes
-- import_tasks: systemd.yml
+- import_tasks: systemd-user.yml
 - import_tasks: pulseaudio.yml
 - import_tasks: gnupg.yml
 - import_tasks: dotfiles.yml
