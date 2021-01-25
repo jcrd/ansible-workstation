@@ -17,6 +17,7 @@
   loop:
     - jcrd/dovetail
     - jcrd/clipped
+    - jcrd/nicety
     - jcrd/passless
 
 - name: Install packages
@@ -53,6 +54,7 @@
       - mpv
       - mupdf
       - neovim
+      - nicety
       - passless
       - picom
       - pinentry-gtk
@@ -96,3 +98,16 @@
   flatpak_remote:
     name: flathub
     flatpakrepo_url: https://flathub.org/repo/flathub.flatpakrepo
+
+- name: Enable systemd units from packages
+  systemd:
+    name: "{{ item }}"
+    enabled: yes
+  loop:
+    - nicety.service
+
+- name: Configure nicety
+  copy:
+    src: nicety/rules.d/
+    dest: /etc/nicety/rules.d
+    mode: preserve

@@ -1,0 +1,1 @@
+{ "name": "picom", "nice": -10, "io_class": "realtime" }
