@@ -1,6 +1,5 @@
 - hosts: localhost
   connection: local
-  gather_facts: no
   pre_tasks:
     - name: Get fedora version
       command: rpm -E %fedora

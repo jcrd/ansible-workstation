@@ -85,12 +85,12 @@
 
 - name: Set zsh as user shell
   user:
-    name: '{{ ansible_user }}'
+    name: '{{ ansible_user_id }}'
     shell: /usr/bin/zsh
 
 - name: Add user to mock group
   user:
-    name: '{{ ansible_user }}'
+    name: '{{ ansible_user_id }}'
     groups: mock
     append: yes
 
