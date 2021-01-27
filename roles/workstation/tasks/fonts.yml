@@ -3,7 +3,6 @@
     src: /usr/share/fontconfig/conf.avail/{{ item }}
     dest: /etc/fonts/conf.d/{{ item }}
     state: link
-    mode: preserve
   loop:
     - 10-sub-pixel-rgb.conf
     - 11-lcdfilter-default.conf
