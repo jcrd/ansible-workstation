@@ -39,6 +39,7 @@
       - flatpak
       - fontawesome-fonts
       - fzf
+      - gcolor2
       - git
       - git-subtree
       - gucharmap
