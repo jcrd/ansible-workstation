@@ -32,7 +32,6 @@
       - colordiff
       - copr-cli
       - d-feet
-      - exa
       - fedora-packager
       - fedora-review
       - ffmpegthumbnailer
