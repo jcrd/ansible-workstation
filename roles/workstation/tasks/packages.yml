@@ -51,6 +51,7 @@
       - liberation-fonts
       - lm_sensors
       - luarocks
+      - maim
       - mosh
       - mpv
       - mupdf
@@ -74,6 +75,7 @@
       - the_silver_searcher
       - tmux
       - toolbox
+      - xclip
       - xorg-x11-server-Xephyr
       - zoxide
       - zsh
