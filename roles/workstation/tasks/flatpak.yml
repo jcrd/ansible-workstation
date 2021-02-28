@@ -1,0 +1,11 @@
+- name: Add flathub flatpak remote
+  flatpak_remote:
+    name: flathub
+    flatpakrepo_url: https://flathub.org/repo/flathub.flatpakrepo
+
+- name: Install flatpaks
+  command: flatpak install --assumeyes flathub {{ item }}
+  args:
+    warn: false
+  loop:
+    - cc.arduino.arduinoide

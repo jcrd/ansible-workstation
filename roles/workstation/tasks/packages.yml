@@ -85,11 +85,6 @@
       - dovetail
     install_weak_deps: no
 
-- name: Add flathub flatpak remote
-  flatpak_remote:
-    name: flathub
-    flatpakrepo_url: https://flathub.org/repo/flathub.flatpakrepo
-
 - name: Enable systemd units from packages
   systemd:
     name: "{{ item }}"
