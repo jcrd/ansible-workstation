@@ -1,4 +1,4 @@
-# ansible-fedora
+# ansible-workstation
 
 Ansible playbook to set up customized Fedora environment based on the
 `Basic Desktop` Anaconda software selection, with roles for desktop- and
