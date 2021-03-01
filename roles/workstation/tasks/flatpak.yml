@@ -9,3 +9,4 @@
     warn: false
   loop:
     - cc.arduino.arduinoide
+    - org.gimp.GIMP
