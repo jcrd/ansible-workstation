@@ -73,6 +73,7 @@
       - strace
       - sxiv
       - the_silver_searcher
+      - tigervnc
       - tmux
       - toolbox
       - xclip
