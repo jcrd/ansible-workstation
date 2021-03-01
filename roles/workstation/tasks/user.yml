@@ -7,11 +7,11 @@
   user:
     name: '{{ ansible_user_id }}'
     groups: mock
-    append: yes
+    append: true
 
 # Required to access serial ports.
 - name: Add user to dialout group
   user:
     name: '{{ ansible_user_id }}'
     groups: dialout
-    append: yes
+    append: true

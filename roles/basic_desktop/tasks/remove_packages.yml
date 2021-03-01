@@ -18,4 +18,4 @@
   dnf: name=NetworkManager-wifi
 
 - name: Autoremove leaf packages
-  dnf: autoremove=yes
+  dnf: autoremove=true

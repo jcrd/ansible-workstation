@@ -1,2 +1,2 @@
 - import_tasks: remove_packages.yml
-  become: yes
+  become: true

@@ -84,12 +84,12 @@
   dnf:
     name:
       - dovetail
-    install_weak_deps: no
+    install_weak_deps: false
 
 - name: Enable systemd units from packages
   systemd:
     name: "{{ item }}"
-    enabled: yes
+    enabled: true
   loop:
     - nicety.service
 

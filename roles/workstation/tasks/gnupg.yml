@@ -1,7 +1,7 @@
 - name: Enable gpg systemd user units
   systemd:
     name: "{{ item }}"
-    enabled: yes
+    enabled: true
     scope: user
   loop:
     - gpg-agent-ssh.socket

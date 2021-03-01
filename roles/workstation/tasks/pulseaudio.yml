@@ -25,11 +25,11 @@
 - name: Enable pulseaudio user service
   systemd:
     name: pulseaudio.service
-    enabled: yes
+    enabled: true
     scope: user
 
 - name: Disable pulseaudio user socket
   systemd:
     name: pulseaudio.socket
-    enabled: no
+    enabled: false
     scope: user

@@ -1,6 +1,6 @@
 - import_tasks: packages.yml
-  become: yes
+  become: true
 - import_tasks: sudo.yml
-  become: yes
+  become: true
 - import_tasks: logind.yml
-  become: yes
+  become: true

@@ -15,17 +15,17 @@
     src: /usr/share/ddcutil/data/45-ddcutil-i2c.rules
     dest: /etc/udev/rules.d
     mode: preserve
-  become: yes
+  become: true
 
 - name: Create i2c group
   group:
     name: i2c
-    system: yes
-  become: yes
+    system: true
+  become: true
 
 - name: Add user to i2c group
   user:
     name: '{{ user }}'
     groups: i2c
-    append: yes
-  become: yes
+    append: true
+  become: true
