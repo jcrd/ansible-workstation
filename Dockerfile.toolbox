@@ -1,3 +1,1 @@
-FROM supplantr/toolbox
-
-RUN dnf install -y ansible-lint
+FROM supplantr/ansible-toolbox
