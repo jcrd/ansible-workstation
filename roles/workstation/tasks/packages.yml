@@ -25,6 +25,7 @@
     name:
       - ImageMagick
       - abduco
+      - aria2
       - atool
       - blueman
       - chromium-freeworld
