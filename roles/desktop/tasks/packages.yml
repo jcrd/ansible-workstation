@@ -9,6 +9,7 @@
   dnf:
     name:
       - ddcutil
+      - nvme-cli
 
 - name: Copy i2c udev rule
   copy:
