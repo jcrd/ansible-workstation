@@ -26,6 +26,7 @@
       - ImageMagick
       - abduco
       - aria2
+      - arp-scan
       - atool
       - blueman
       - chromium-freeworld
