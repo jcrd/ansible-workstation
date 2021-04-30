@@ -68,12 +68,12 @@
       - qutebrowser
       - ranger
       - redshift
+      - ripgrep
       - rofi
       - rpkg
       - sshfs
       - strace
       - sxiv
-      - the_silver_searcher
       - tigervnc
       - tmux
       - toolbox
