@@ -1,7 +1,6 @@
 - name: Download linrunner gpg key
   rpm_key:
     key: 'https://repo.linrunner.de/fedora/tlp/repos/RPM-GPG-KEY-tlp-fedora-{{ releasever }}-primary'
-    fingerprint: 0D3C F36C EB28 B582 D6DE F296 82B6 D96F 1381 B02A
 
 - name: Enable linrunner tlp repo
   dnf:
