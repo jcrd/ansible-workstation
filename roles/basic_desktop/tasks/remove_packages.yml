@@ -19,3 +19,7 @@
 
 - name: Autoremove leaf packages
   dnf: autoremove=true
+
+- name: Replace pipewire-pulseaudio with pulseaudio
+  dnf: name=pulseaudio allowerasing=yes
+  when: releasever | int >= 34
