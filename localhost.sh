@@ -2,5 +2,5 @@
 
 export ANSIBLE_LOCALHOST_WARNING=False
 
-rpm -q --quiet ansible || sudo dnf install -y ansible
+pip show ansible || pip install --user ansible
 ansible-playbook --ask-become-pass localhost.yml
