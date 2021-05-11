@@ -2,6 +2,7 @@
   flatpak_remote:
     name: flathub
     flatpakrepo_url: https://flathub.org/repo/flathub.flatpakrepo
+  become: true
 
 - name: Install flatpaks
   command: flatpak install --assumeyes flathub {{ item }}
