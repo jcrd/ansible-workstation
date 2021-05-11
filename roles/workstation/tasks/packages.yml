@@ -19,6 +19,7 @@
     - jcrd/clipped
     - jcrd/nicety
     - jcrd/passless
+    - jcrd/toolboxcutter
 
 - name: Install packages
   dnf:
@@ -77,6 +78,7 @@
       - tigervnc
       - tmux
       - toolbox
+      - toolboxcutter
       - xclip
       - xorg-x11-server-Xephyr
       - xorg-x11-utils
