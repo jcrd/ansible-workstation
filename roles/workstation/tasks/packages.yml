@@ -73,6 +73,7 @@
       - rofi
       - rpkg
       - sshfs
+      - sshpass
       - strace
       - sxiv
       - tigervnc
