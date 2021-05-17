@@ -82,7 +82,6 @@
       - toolboxcutter
       - xclip
       - xorg-x11-server-Xephyr
-      - xorg-x11-utils
       - xprop
       - zoxide
       - zsh
