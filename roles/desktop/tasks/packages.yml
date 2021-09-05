@@ -3,6 +3,7 @@
   args:
     warn: false
   loop:
+    - jcrd/snapback
     - rockowitz/ddcutil
 
 - name: Install packages
@@ -10,6 +11,14 @@
     name:
       - ddcutil
       - nvme-cli
+      - snapback
+
+- name: Enable systemd units from packages
+  systemd:
+    name: "{{ item }}"
+    enabled: true
+  loop:
+    - snapback.timer
 
 - name: Copy i2c udev rule
   copy:
