@@ -29,6 +29,7 @@
       - aria2
       - arp-scan
       - atool
+      - byzanz
       - chromium-freeworld
       - clipped
       - colordiff
@@ -71,6 +72,7 @@
       - ripgrep
       - rofi
       - rpkg
+      - slop
       - sshfs
       - sshpass
       - strace
