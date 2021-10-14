@@ -77,6 +77,7 @@
       - sshpass
       - strace
       - sxiv
+      - syncthing
       - tigervnc
       - tmux
       - toolbox
@@ -100,6 +101,13 @@
     enabled: true
   loop:
     - nicety.service
+
+- name: Enable firewalld services
+  firewalld:
+    service: "{{ item }}"
+    state: enabled
+  loop:
+    - syncthing
 
 - name: Configure nicety
   copy:

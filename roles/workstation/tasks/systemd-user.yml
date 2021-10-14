@@ -6,4 +6,5 @@
   loop:
     - clipsync.service
     - redshift.service
+    - syncthing.service
     - wm-launchd.service
