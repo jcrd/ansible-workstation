@@ -4,3 +4,5 @@
   become: true
 - import_tasks: logind.yml
   become: true
+- import_tasks: xorg.yml
+  become: true

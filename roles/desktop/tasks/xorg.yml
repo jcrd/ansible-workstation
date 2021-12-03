@@ -1,0 +1,13 @@
+- name: Configure xorg
+  copy:
+    src: "{{ item }}"
+    dest: /etc/X11/xorg.conf.d
+    mode: preserve
+  loop:
+    - 90-monitor.conf
+
+- name: Set DPI
+  lineinfile:
+    path: /etc/X11/Xresources
+    regexp: '^Xft.dpi:'
+    line: 'Xft.dpi: 158'
