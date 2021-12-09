@@ -38,6 +38,7 @@
       - fedora-packager
       - fedora-review
       - ffmpegthumbnailer
+      - fira-code-fonts
       - flatpak
       - fontawesome-fonts
       - fzf
