@@ -12,3 +12,5 @@
 - import_tasks: gnupg.yml
 - import_tasks: dotfiles.yml
 - import_tasks: flatpak.yml
+- import_tasks: user-packages.yml
+- import_tasks: user-fonts.yml

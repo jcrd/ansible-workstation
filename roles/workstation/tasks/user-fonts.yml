@@ -1,0 +1,12 @@
+- name: Create local fonts directory
+  file:
+    path: '{{ localdir }}/share/fonts'
+    state: directory
+
+- name: Copy font files
+  copy:
+    src: fonts/{{ item }}/
+    dest: '{{ localdir }}/share/fonts/{{ item }}'
+    mode: preserve
+  loop:
+    - hack

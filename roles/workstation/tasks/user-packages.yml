@@ -1,0 +1,4 @@
+- name: Install LunarVim
+  shell: bash <(curl -s https://raw.githubusercontent.com/lunarvim/lunarvim/master/utils/installer/install.sh)
+  args:
+    creates: '{{ localdir }}/bin/lvim'

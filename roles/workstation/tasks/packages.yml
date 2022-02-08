@@ -30,18 +30,20 @@
       - arp-scan
       - atool
       - byzanz
+      - cargo
       - chromium-freeworld
       - clipped
       - colordiff
       - copr-cli
       - d-feet
+      - fd-find
       - fedora-packager
       - fedora-review
       - ffmpegthumbnailer
-      - fira-code-fonts
       - flatpak
       - fontawesome-fonts
       - fzf
+      - gcc-c++
       - gcolor2
       - git
       - git-subtree
@@ -60,6 +62,7 @@
       - mupdf
       - neovim
       - nicety
+      - npm
       - passless
       - picom
       - pinentry-gtk

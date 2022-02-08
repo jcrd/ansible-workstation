@@ -5,7 +5,6 @@
     update: false
   loop:
     - {repo: 'configs', dest: 'configs'}
-    - {repo: 'neovim-config', dest: 'nvim'}
     - {repo: 'zsh-config', dest: 'zsh'}
 
 - name: Configure dotfiles
