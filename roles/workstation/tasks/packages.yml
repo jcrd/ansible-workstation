@@ -36,6 +36,7 @@
       - colordiff
       - copr-cli
       - d-feet
+      - direnv
       - fd-find
       - fedora-packager
       - fedora-review
