@@ -7,6 +7,7 @@
     - {repo: 'configs', dest: 'configs'}
     - {repo: 'neovim-config', dest: 'nvim'}
     - {repo: 'zsh-config', dest: 'zsh'}
+    - {repo: 'awesome-config', dest: 'awesome'}
 
 - name: Configure dotfiles
   shell: >
@@ -19,3 +20,4 @@
     - configs
     - nvim
     - zsh
+    - awesome

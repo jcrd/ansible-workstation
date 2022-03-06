@@ -24,7 +24,8 @@
   args:
     warn: false
   loop:
-    - jcrd/dovetail
+    - jcrd/sessiond
+    - jcrd/awesome-luajit-nightly
     - jcrd/clipped
     - jcrd/nicety
     - jcrd/passless
@@ -38,6 +39,7 @@
       - aria2
       - arp-scan
       - atool
+      - awesome
       - byzanz
       - chromium-freeworld
       - clipped
@@ -84,6 +86,7 @@
       - ripgrep
       - rofi
       - rpkg
+      - sessiond
       - slop
       - sshfs
       - sshpass
@@ -101,13 +104,6 @@
       - xprop
       - zoxide
       - zsh
-
-- name: Install packages excluding weak dependencies
-  dnf:
-    name:
-      - dovetail
-    install_weak_deps: false
-
 - name: Enable systemd units from packages
   systemd:
     name: "{{ item }}"
