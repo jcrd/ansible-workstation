@@ -41,7 +41,6 @@
       - atool
       - awesome
       - byzanz
-      - chromium-freeworld
       - clipped
       - code
       - colordiff
@@ -51,6 +50,7 @@
       - fedora-packager
       - fedora-review
       - ffmpegthumbnailer
+      - firefox
       - flatpak
       - fontawesome-fonts
       - fzf
@@ -80,7 +80,6 @@
       - python-neovim
       - python-pillow
       - python-tasklib
-      - qutebrowser
       - ranger
       - redshift
       - ripgrep
