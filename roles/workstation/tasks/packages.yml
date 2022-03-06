@@ -10,6 +10,15 @@
       - 'https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-{{ releasever }}.noarch.rpm'
       - 'https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-{{ releasever }}.noarch.rpm'
 
+- name: Download microsoft gpg key
+  rpm_key: key='https://packages.microsoft.com/keys/microsoft.asc'
+
+- name: Enable vscode repo
+  copy:
+    src: vscode.repo
+    dest: /etc/yum.repos.d/vscode.repo
+    mode: preserve
+
 - name: Enable copr repos
   command: dnf copr -y enable {{ item }}
   args:
@@ -33,6 +42,7 @@
       - cargo
       - chromium-freeworld
       - clipped
+      - code
       - colordiff
       - copr-cli
       - d-feet
