@@ -19,6 +19,12 @@
     dest: /etc/yum.repos.d/vscode.repo
     mode: preserve
 
+- name: Enable notion-repackaged repo
+  copy:
+    src: notion-repackaged.repo
+    dest: /etc/yum.repos.d/notion-repackaged.repo
+    mode: preserve
+
 - name: Enable copr repos
   command: dnf copr -y enable {{ item }}
   args:
@@ -72,6 +78,7 @@
       - mupdf
       - neovim
       - nicety
+      - notion-app-enhanced
       - passless
       - picom
       - pinentry-gtk
@@ -103,6 +110,7 @@
       - xprop
       - zoxide
       - zsh
+
 - name: Enable systemd units from packages
   systemd:
     name: "{{ item }}"
