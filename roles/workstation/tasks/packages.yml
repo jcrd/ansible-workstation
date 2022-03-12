@@ -63,6 +63,7 @@
       - gcolor2
       - git
       - git-subtree
+      - gnome-keyring
       - gucharmap
       - htop
       - i3lock
@@ -93,6 +94,7 @@
       - rlwrap
       - rofi
       - rpkg
+      - seahorse
       - sessiond
       - slop
       - sshfs
