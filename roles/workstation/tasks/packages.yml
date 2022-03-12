@@ -90,6 +90,7 @@
       - ranger
       - redshift
       - ripgrep
+      - rlwrap
       - rofi
       - rpkg
       - sessiond
