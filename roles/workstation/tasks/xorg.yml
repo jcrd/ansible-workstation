@@ -1,0 +1,7 @@
+- name: Configure xorg
+  copy:
+    src: "{{ item }}"
+    dest: /etc/X11/xorg.conf.d
+    mode: preserve
+  loop:
+    - 00-keyboard.conf
