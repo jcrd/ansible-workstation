@@ -1,0 +1,31 @@
+- name: Install virtualization group
+  dnf: name=@virtualization
+
+- name: Disable COW for libvirt/images directory
+  file:
+    path: /var/lib/libvirt/images
+    attr: +C
+
+- name: Enable libvirtd socket
+  systemd:
+    name: libvirtd.socket
+    enabled: true
+
+- name: Add user to libvirt group
+  user:
+    name: '{{ ansible_user_id }}'
+    groups: libvirt
+    append: true
+
+- name: Create virt/share directory
+  file:
+    path: /home/{{ ansible_user_id }}/virt/share
+    state: directory
+    owner: '{{ ansible_user_id }}'
+    group: libvirt
+    mode: 0775
+
+- name: Set SELinux context for virt/share directory
+  shell: >
+    semanage fcontext -a -t svirt_image_t "/home/{{ ansible_user_id }}/virt/share(/.*)?" &&
+    restorecon -R /home/{{ ansible_user_id }}/virt/share

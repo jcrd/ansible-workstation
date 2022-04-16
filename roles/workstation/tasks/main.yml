@@ -1,5 +1,7 @@
 - import_tasks: packages.yml
   become: true
+- import_tasks: virt.yml
+  become: true
 - import_tasks: user.yml
   become: true
 - import_tasks: fonts.yml
