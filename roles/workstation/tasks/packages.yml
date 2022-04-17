@@ -86,7 +86,6 @@
       - ps_mem
       - python-neovim
       - python-pillow
-      - python-tasklib
       - ranger
       - redshift
       - ripgrep
@@ -101,7 +100,6 @@
       - strace
       - sxiv
       - syncthing
-      - task
       - tigervnc
       - tmux
       - toolbox
