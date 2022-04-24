@@ -10,4 +10,10 @@
     warn: false
   loop:
     - cc.arduino.arduinoide
+    - com.google.Chrome
     - org.gimp.GIMP
+
+- name: Set default web browser
+  command: xdg-settings set default-web-browser com.google.Chrome.desktop
+  args:
+    warn: false
