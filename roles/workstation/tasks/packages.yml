@@ -56,7 +56,6 @@
       - fedora-packager
       - fedora-review
       - ffmpegthumbnailer
-      - firefox
       - flatpak
       - fzf
       - gcolor2
