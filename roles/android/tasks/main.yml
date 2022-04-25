@@ -1,0 +1,20 @@
+- name: Install packages
+  dnf:
+    name:
+      - android-tools
+  become: true
+
+- name: Install flatpaks
+  command: flatpak install --assumeyes flathub com.google.AndroidStudio
+  args:
+    warn: false
+
+- name: Check if ~/Android exists
+  stat: path="{{ homedir }}/Android"
+  register: android
+
+- name: Create ~/Android btrfs subvolume
+  command: btrfs subvolume create {{ homedir }}/Android
+  args:
+    warn: false
+  when: not android.stat.exists

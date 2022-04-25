@@ -1,0 +1,22 @@
+- name: Check if ~/.flutter exists
+  stat: path="{{ homedir }}/.flutter"
+  register: flutter
+
+- name: Create ~/.flutter btrfs subvolume
+  command: btrfs subvolume create {{ homedir }}/.flutter
+  args:
+    warn: false
+  when: not flutter.stat.exists
+
+- name: Clone flutter repository
+  git:
+    repo: https://github.com/flutter/flutter.git
+    dest: "{{ homedir }}/.flutter"
+    single_branch: yes
+    version: stable
+  when: not flutter.stat.exists
+
+- name: Precache flutter binaries
+  command: "{{ homedir }}/.flutter/bin/flutter precache"
+  args:
+    warn: false

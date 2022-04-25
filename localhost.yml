@@ -18,3 +18,4 @@
     user: "{{ lookup('env', 'USER') }}"
   roles:
     - workstation
+    - flutter
