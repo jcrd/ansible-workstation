@@ -82,6 +82,7 @@
       - passless
       - picom
       - pinentry-gtk
+      - pip
       - progress
       - ps_mem
       - python-neovim
@@ -130,3 +131,8 @@
     src: nicety/rules.d/
     dest: /etc/nicety/rules.d
     mode: preserve
+
+- name: Install pip packages
+  pip:
+    name:
+      - ansible
