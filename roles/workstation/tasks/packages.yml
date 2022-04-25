@@ -1,3 +1,11 @@
+- name: Install Fedora workstation repositories
+  dnf: name=fedora-workstation-repositories
+
+- name: Enable Google Chrome repo
+  command: dnf config-manager --set-enabled google-chrome
+  args:
+    warn: false
+
 - name: Download rpmfusion gpg keys
   rpm_key: key={{ item }}
   loop:
@@ -63,6 +71,7 @@
       - git-subtree
       - gnome-keyring
       - golang
+      - google-chrome
       - gucharmap
       - htop
       - i3lock
@@ -118,6 +127,11 @@
     enabled: true
   loop:
     - nicety.service
+
+- name: Set default web browser
+  command: xdg-settings set default-web-browser google-chrome.desktop
+  args:
+    warn: false
 
 - name: Enable firewalld services
   firewalld:
