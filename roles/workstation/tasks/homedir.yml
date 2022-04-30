@@ -1,0 +1,9 @@
+- name: Check if ~/Downloads exists
+  stat: path="{{ homedir }}/Downloads"
+  register: downloads
+
+- name: Create ~/Downloads btrfs subvolume
+  command: btrfs subvolume create {{ homedir }}/Downloads
+  args:
+    warn: false
+  when: not downloads.stat.exists

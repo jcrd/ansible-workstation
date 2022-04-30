@@ -17,3 +17,4 @@
 - import_tasks: dotfiles.yml
 - import_tasks: flatpak.yml
 - import_tasks: user-fonts.yml
+- import_tasks: homedir.yml
