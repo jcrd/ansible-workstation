@@ -71,7 +71,7 @@
       - git-subtree
       - gnome-keyring
       - golang
-      - google-chrome
+      - google-chrome-stable
       - gucharmap
       - htop
       - i3lock
@@ -130,7 +130,7 @@
     - nicety.service
 
 - name: Set default web browser
-  command: xdg-settings set default-web-browser google-chrome.desktop
+  command: xdg-settings set default-web-browser google-chrome-stable.desktop
   args:
     warn: false
 
